@@ -141,3 +141,14 @@ int main()
     }
     return 0;
 }
+
+
+/*
+ stack operation can be performed in c++ by using following methods
+ - stack <int> s  = declaring the stack   
+ - s.empty()  = checks whether stack is empty or not
+ - s.push(number) = push the value to the stack  
+ - s.size() = returns the size of the stack
+ - s.pop() = pops out the element from the stack
+ - s.top() = returns the value of top of the stack
+*/
