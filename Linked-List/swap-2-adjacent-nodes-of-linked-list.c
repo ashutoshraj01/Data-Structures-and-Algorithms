@@ -1,4 +1,5 @@
-// This code perform CRUD operations using linked list.
+// This code perform swaping of adjacent nodes of linked list.
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>

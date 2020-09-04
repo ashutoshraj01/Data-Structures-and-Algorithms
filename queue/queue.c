@@ -1,4 +1,4 @@
-// This file contains stack operations - push, pop, traverse, peek
+// This file contains queue operations - enqueue, dequeue, front, rear. 
 
 #include <stdio.h>
 #include <stdbool.h>
