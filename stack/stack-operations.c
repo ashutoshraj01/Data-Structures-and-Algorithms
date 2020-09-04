@@ -96,7 +96,7 @@ int main()
 {
 
     printf("\t~~~~~~~~~~~~~~~~~ STACK OPERATIONS ~~~~~~~~~~~~~~~~~\n");
-    printf("The stack used here is of size 5 \n");
+    printf("The stack used here is of max size 5 \n");
 
     int continueOperations = 1;
     while (continueOperations)
