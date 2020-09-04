@@ -95,19 +95,31 @@ void swapNodes(){
         int data = 0;
         scanf("%d", &data);
         printf("\n\t *****  The element you entered will be swapped with the next right element!   ******\n\n");
-        while(p->link->data!= data || p->link->link != NULL || p->data!= data){
+        
+        printf("\np = %d\n",p->data);
+
+        while(p->data != data && p->link != NULL  && p->link->data != data ){
+          printf("\nInside = %d\n",p->data);
           p = p->link;
           count++;
         }
-        if(count+1 == findLength()){
-            printf("\n\n\t The last element can't be swapped\n");
-        }else if(p->data == data || p->link->data == data){
+         
+         printf("\np = %d\n",p->data);  
+         printf("/ncount = %d/n",count);
+
+        if(count+2 == findLength()){
+            printf("\n\n\t The last element can't be swapped, next adjacent element doesn't exist\n\n");
+        }else if(p->data == data){
+             q= p->link;
+             root = q;
+             p->link= q->link;
+             q->link = p;
+        }else if( p->link->data == data){
              q = p->link;
              r = q->link;
             q->link = r->link;
             r->link = q;
             p->link = r;
-
         }
 
     }
