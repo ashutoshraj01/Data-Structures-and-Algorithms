@@ -1,1 +1,1 @@
-# Linear Search using Vector
+# Linear Search
