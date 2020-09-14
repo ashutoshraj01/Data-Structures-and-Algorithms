@@ -36,26 +36,34 @@ void appendNode()
             if (t->data > curr->data)
             {
                 curr = curr->right;
-            }else{
+            }
+            else
+            {
                 curr = curr->left;
             }
         }
-        if(t->data > p->data){
+        if (t->data > p->data)
+        {
             p->right = t;
-        }else{
+        }
+        else
+        {
             p->left = t;
         }
     }
-    printf("\n\t\t%d inserted successfully\n\n",data);
+    printf("\n\t\t%d inserted successfully\n\n", data);
 }
 
 void deleteNode() {}
 
-void traverseTree()
+void inorderTreeTraversal(struct Node *t)
 {
+ if(t->left)
+  inorderTreeTraversal(t->left);
+  printf("\t%d\t",t->data);
+  if(t->right)
+  inorderTreeTraversal(t->right);
 }
-
-void findLength() {}
 
 int main()
 {
@@ -63,12 +71,11 @@ int main()
     printf("\n\t\t*****  BINARY SEARCH TREE ****\n\n");
     while (1)
     {
-        printf("\t>>>>>>>> Choose the operation you want to perform  <<<<<<<<<\n");
+        printf("\n\t>>>>>>>> Choose the operation you want to perform  <<<<<<<<<\n");
         printf("1. Append \n");
-        printf("2. Find the length\n");
-        printf("3. Traverse the Whole tree\n");
-        printf("4. Delete a node\n");
-        printf("5. Quit\n");
+        printf("2. Traverse the Whole tree(Display all node data of tree)\n");
+        printf("3. Delete a node\n");
+        printf("4. Quit\n");
         printf("\tEnter Your choice(in numbers): ");
         scanf("%d", &ch);
         switch (ch)
@@ -77,15 +84,14 @@ int main()
             appendNode();
             break;
         case 2:
-            findLength();
+            printf("\n\tThe traversal used here is inorder\n");
+            inorderTreeTraversal(root);
+            printf("\n\n");
             break;
         case 3:
-            traverseTree();
-            break;
-        case 4:
             deleteNode();
             break;
-        case 5:
+        case 4:
             printf("\n\n\t\tProgram terminated successfully!\n\n");
             exit(1);
             break;
