@@ -20,9 +20,15 @@ int countDigitUsingRecursion(int n){
     return 1 + countDigitUsingRecursion(n/10);       
 }
 
+// using logarithmic approach, can be used for positive no's only
+int countDigitUsingLog(int n){
+    return floor(log10(n)+1);
+}
+
 int main()
 {
     cout<<countDigit(123); // prints 3
     cout<<countDigitUsingRecursion(123); // prints 3
+    cout<<countDigitUsingLog(123);  // Prints 3
     return 0;
 }
