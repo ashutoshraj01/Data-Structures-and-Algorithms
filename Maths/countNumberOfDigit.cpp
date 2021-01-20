@@ -1,5 +1,5 @@
 // Count No of digit in a given number.
-
+// Assumptions: n>=0
 #include <bits/stdc++.h>
 using namespace std;
   
