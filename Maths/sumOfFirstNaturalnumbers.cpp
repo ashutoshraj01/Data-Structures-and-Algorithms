@@ -17,7 +17,7 @@ int sumUsingRecursion(int n){
 
 int main()
 {
-    cout<<sum(3); // prints 6
+    cout<<sum(3)<<"\n"; // prints 6
     cout<<sumUsingRecursion(3); // prints 6
     return 0;
 }
